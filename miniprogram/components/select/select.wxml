@@ -1,0 +1,21 @@
+<!--components/select/select.wxml-->
+<view class="select" bindtap="toggleHandle">
+    <view class="selected-item">
+      {{selected}}
+    </view>
+    <view 
+        wx:if="{{showOption}}" 
+        class="select-options custom-class" 
+        catchtap="selectHandle" 
+    >
+        <view  
+            wx:for="{{data}}" 
+            wx:key="name" 
+            wx:for-item="item" 
+            data-data="{{item}}" 
+            class="select-item"
+        >
+            {{item.name}}
+        </view>
+    </view>
+</view>

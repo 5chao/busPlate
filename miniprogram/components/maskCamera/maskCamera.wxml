@@ -1,0 +1,34 @@
+<view>
+    <camera 
+        wx:if='{{isShowCamera}}' 
+        class="camera-box" 
+        devic-position="back" 
+        flash="off" 
+        binderror="error" 
+        style='width:100vw; height:200px;'
+    >
+        <cover-view class='camerabgImage'>
+            <cover-view class="active">
+                <cover-view class="text">请将车辆号码放入框中，点击拍照进行识别</cover-view>
+                <cover-view class="btn" bindtap="takePhotoAction">
+                    <cover-view class="button"></cover-view>
+                </cover-view>
+            </cover-view>
+        </cover-view>
+    </camera>
+
+    <view wx:if="{{src}}" class="camera-option">
+        <image mode="widthFix" src="{{src}}" class="photo-img"></image>
+        <view class="camera-option-btn">
+            <button bindtap="submitHandle">开始识别</button>
+            <button bindtap="repeatTake">重新拍摄</button>
+        </view>
+    </view>
+
+    <view>
+        <view>
+            {{plateNumber}}
+        </view>
+    </view>
+        
+</view>

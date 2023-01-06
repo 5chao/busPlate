@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="index-page">
+    <view class="camara-plate">
+        <navigator url="/pages/scanPlate/scanPlate" hover-class="navigator-hover">拍照查询</navigator>
+    </view>
+    <view class="input-plate">
+        <view class="input-plate-check">
+            输入查询
+        </view>
+        <SearchPlate />
+    </view>
+</view>

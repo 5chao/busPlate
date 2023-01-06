@@ -1,0 +1,58 @@
+<!--components/searchPlate/searchPlate.wxml-->
+<view>
+    <view class="plate-select">
+        <Select 
+            data="{{data}}" 
+            showOption="{{showCode}}" 
+            selected="{{selectedCode}}"
+            bind:select="areaCodeSelect" 
+            bind:tap="areaCodeHandle" 
+        />
+        <Select 
+            data="{{subData}}" 
+            showOption="{{showSubCode}}" 
+            selected="{{selectedSubCode}}"
+            bind:select="areaSubCodeSelect" 
+            bind:tap="areaSubCodeHandle" 
+            custom-class="sub-code-select"
+        />
+        <input 
+            placeholder="请输入"
+            maxlength="8"
+            class="plate-input"
+            bindinput="numberInputHandle"
+        />
+    </view>
+    <view class="plate-button">
+        <button bindtap="belongHandle">归属地查询</button>
+        <view class="plate-space"></view>
+        <button bindtap="belongDetailHandle">详情查询</button>
+    </view>
+    <view wx:if="{{showBelong}}" class="belong-result">
+        <view class="plate-wrapper">
+            <view class="plate-bold">
+                {{selectedCode}}{{selectedSubCode}} {{plateNumber}}
+            </view>
+        </view>
+        <view class="plate-location">
+            {{localPlateName}}
+        </view>
+    </view>
+    <view wx:if="{{showDetailResult}}" class="result-detail">
+        <view class="plate-result-tips">
+            数据结果仅供参考
+        </view>
+        <view class="result-detail-item">
+            品牌: {{plateDetail.brand}}
+        </view>
+        <view class="result-detail-item">
+            所在地: {{plateDetail.local}}
+        </view>
+        <view class="result-detail-item">
+            车身颜色: {{plateDetail.color}}
+        </view>
+        <view class="result-detail-item">
+            车主性别: {{plateDetail.sex}}
+        </view>
+    </view>
+</view>
