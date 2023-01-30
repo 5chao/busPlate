@@ -12,3 +12,21 @@ App<IAppOption>({
     })
   },
 })
+
+/*"tabBar": {
+        "selectedColor": "#1b6fff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "./images/home_icon.png",
+                "selectedIconPath": "./images/home_selected_icon.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/knowledge/knowledge",
+                "iconPath": "./images/home_book_icon.png",
+                "selectedIconPath": "./images/home_book_selected_icon.png",
+                "text": "知识库"
+            }
+        ]
+    },*/
