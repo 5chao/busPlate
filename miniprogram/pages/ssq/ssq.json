@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "Ball": "../../components/ball/ball"
+    },
+    "navigationBarTitleText": "双色球"
+}

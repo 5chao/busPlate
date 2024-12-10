@@ -1,0 +1,29 @@
+<!--pages/ssq/ssq.wxml-->
+<view class="container">
+    <view class="header">双色球生成器</view>
+    <view class="body">
+        <view 
+            class="ball-list" 
+            wx:for="{{dltData}}" 
+            wx:for-item="item" 
+            wx:key="index">
+            <Ball 
+            wx:for="{{item.font}}" 
+            wx:for-item="ball" 
+            wx:key="ball" 
+            ballType="red" 
+            ballNum="{{ball}}" />
+            <Ball 
+            ballType="blue" 
+            ballNum="{{item.end[0]}}" />
+            <Ball 
+            ballType="blue" 
+            ballNum="{{item.end[1]}}" />
+        </view>
+        
+    </view>
+    <view class="footer">
+        <view class="btn reset" bind:tap="initData">重新生成</view>
+        <view class="btn copy" bind:tap="copyHandle">复制</view>
+    </view>
+</view>

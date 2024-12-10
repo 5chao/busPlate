@@ -1,16 +1,17 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/knowledge/knowledge",
-        "pages/scanPlate/scanPlate"
+        "pages/ssq/ssq",
+        "pages/ssqLog/ssqLog",
+        "pages/dlt/dlt",
+        "pages/dltLog/dltLog"
     ],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "车牌归属地",
+        "navigationBarTitleText": "机选心水",
         "navigationBarTextStyle": "black"
     },
     "style": "v2",
     "sitemapLocation": "sitemap.json"
 }
-

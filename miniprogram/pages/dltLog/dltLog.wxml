@@ -1,0 +1,19 @@
+<view class="container">
+    <view class="select-header">
+        双色球最近100期数据
+    </view>
+    <view class="log-card" wx:for="{{logList}}" wx:for-item="item" wx:key="issue">
+        <view class="log-row">
+            期数：{{item.issue}}
+        </view>
+        <view class="log-row">
+            日期：{{item.opentime}}
+        </view>
+        <view class="log-row">
+            号码：<text class="red-ball">{{item.drawnumber}}</text>,<text class="blue-ball">{{item.trailnumber}}</text>
+        </view>
+        <view class="log-row">
+            销量：{{item.salemoney}}
+        </view>
+    </view>
+</view>

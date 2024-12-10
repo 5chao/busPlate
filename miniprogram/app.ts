@@ -29,4 +29,8 @@ App<IAppOption>({
                 "text": "知识库"
             }
         ]
-    },*/
+    },
+    结果查询
+    https://api.pearktrue.cn/info?id=330
+    https://api.pearktrue.cn/api/lottery/?get=ssq
+    */

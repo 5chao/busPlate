@@ -1,0 +1,8 @@
+<!--components/ball/ball.wxml-->
+<view class="ball">
+   <view class="bg">
+        <image wx:if="{{ballType == 'red'}}" src="../../images/red_ball.png" />
+        <image wx:else src="../../images/blue_ball.png" />
+   </view>
+   <view class="num">{{ballNum}}</view>
+</view>

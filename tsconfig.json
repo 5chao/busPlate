@@ -23,7 +23,7 @@
   },
   "include": [
     "./**/*.ts"
-  ],
+, "miniprogram/lib/lottery.js"  ],
   "exclude": [
     "node_modules"
   ]

@@ -1,12 +1,65 @@
 <!--index.wxml-->
 <view class="index-page">
-    <!--<view class="camara-plate">
-        <navigator url="/pages/scanPlate/scanPlate" hover-class="navigator-hover">拍照查询</navigator>
-    </view>-->
-    <view class="input-plate">
-        <view class="input-plate-check">
-            输入查询
+    <view wx:if="{{!loading}}">
+        <!-- 双色球 -->
+        <view class="ball-type" >
+            <view class="ball-header">
+                <image src="../../images/ssq.svg"  />
+                <view class="ball-title">双色球</view>
+                <view class="ball-info">{{ssq.issue}}期 {{ssq.opentime}}</view>
+            </view>
+            <view class="ball-body">
+            <!-- 红球 -->
+                <view wx:for="{{ssq.red}}" wx:for-item="item" wx:key="item" class="ball-red ball-num" >
+                    <image src="../../images/red_ball.png" />
+                    <view class="num">{{item}}</view>
+                </view>
+                <!-- 蓝球 -->
+                <view class="ball-blue ball-num">
+                    <image src="../../images/blue_ball.png" />
+                    <view class="num">{{ssq.trailnumber}}</view>
+                </view>
+            </view>
+            <view class="ball-fooer">
+                <navigator url="/pages/ssq/ssq">
+                    <view class="ball-action">随机生成</view>
+                </navigator>
+                <navigator url="/pages/ssqLog/ssqLog">
+                    <view class="ball-action">往期结果</view>
+                </navigator>
+            </view>
         </view>
-        <SearchPlate />
+        <!-- 大乐透 -->
+        <view class="ball-type">
+            <view class="ball-header">
+                <image src="../../images/dlt.svg"  />
+                <view class="ball-title">大乐透</view>
+                <view class="ball-info">{{dlt.issue}}期 {{dlt.opentime}}</view>
+            </view>
+            <view class="ball-body">
+                <!-- 蓝球 -->
+                <view wx:for="{{dlt.red}}" wx:for-item="item" wx:key="item" class="ball-red ball-num" >
+                    <image src="../../images/red_ball.png" />
+                    <view class="num">{{item}}</view>
+                </view>
+                <!-- 红球 -->
+                <view wx:for="{{dlt.blue}}" wx:for-item="item" wx:key="item" class="ball-red ball-num" >
+                    <image src="../../images/blue_ball.png" />
+                    <view class="num">{{item}}</view>
+                </view>
+            </view>
+            <view class="ball-fooer">
+                <navigator url="/pages/dlt/dlt">
+                    <view class="ball-action">随机生成</view>
+                </navigator>
+                <navigator url="/pages/dltLog/dltLog">
+                    <view class="ball-action">往期结果</view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <!-- 加载中 -->
+    <view wx:if="{{loading}}" class="loading">
+        <image src="../../images/loading.gif" />
     </view>
 </view>
